@@ -180,8 +180,6 @@ button {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    padding-top: 16px;
-    padding-bottom: 16px;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -191,12 +189,6 @@ button {
     align-items: center;
   }
 }
-.contacts-item {
-}
-
-.contacts-link {
-}
-
 @media only screen and (min-width: 768px) {
   .contacts-link {
     display: block;
@@ -237,6 +229,7 @@ button {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  z-index: 999;
 }
 .mobile-menu.is-open {
   opacity: 1;
@@ -755,7 +748,7 @@ button {
     flex-direction: row;
     flex-wrap: wrap;
     padding-left: 108px;
-    gap: 72px 24px;
+    gap: 0 24px;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -766,9 +759,13 @@ button {
     gap: 0;
   }
 }
+.footer-wrapper {
+  margin-bottom: 72px;
+}
 @media only screen and (min-width: 1158px) {
   .footer-wrapper {
     margin-right: 120px;
+    margin-bottom: 0;
   }
 }
 .footer-logo {
@@ -795,7 +792,6 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   max-width: 288px;
-  margin-bottom: 72px;
 }
 @media only screen and (min-width: 768px) {
   .footer-text {
@@ -803,9 +799,18 @@ button {
     margin-bottom: 0;
   }
 }
+.social-media {
+  margin-bottom: 101px;
+}
+@media only screen and (min-width: 768px) {
+  .social-media {
+    margin-bottom: 104px;
+  }
+}
 @media only screen and (min-width: 1158px) {
   .social-media {
     margin-right: 80px;
+    margin-bottom: 0;
   }
 }
 .social-text {
@@ -827,12 +832,6 @@ button {
   display: flex;
   justify-content: center;
   gap: 16px;
-  margin-bottom: 101px;
-}
-@media only screen and (min-width: 768px) {
-  .footer-social {
-    margin-bottom: 0;
-  }
 }
 .icon-link.footer-icon-link:active {
   background-color: #31d0aa;
@@ -980,8 +979,6 @@ button {
 }
 .backdrop:not(.is-open) .modal {
   transform: translate(-50%, -100%);
-}
-.is-open {
 }
 .button-modal {
   display: flex;
